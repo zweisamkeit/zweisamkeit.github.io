@@ -7,14 +7,14 @@ author: Zweisamkeit
 ---
 #### Substitutions :
 
-  * [Chiffre de César](/outil-de-cryptanalyse-du-chiffre-de-cesar/)
-  * [Chiffre de Vigenère](/outil-de-cryptanalyse-du-chiffre-de-vigenere/)
+  * [Chiffre de César](/cryptanalyse-du-chiffre-de-cesar/)
+  * [Chiffre de Vigenère](/cryptanalyse-du-chiffre-de-vigenere/)
 
 #### RSA :
 
   * [RSHack](/rshack/) (outil principal)
 
-  * [Attaque de Hastad](/attaque-de-hastad/)
-  * [Attaque de Bleichenbacher](/outil-de-cryptanalyse-attaque-de-bleichenbacher/)
-  * [Attaque de Fermat](/outil-de-cryptanalyse-attaque-de-fermat/)
-  * [Attaques des Modules Communs](/outil-de-cryptanalyse-attaque-des-modules-communs/)
+  * [Attaque de Hastad](/cryptanalyse-rsa-attaque-de-hastad/)
+  * [Attaque de Bleichenbacher](/cryptanalyse-rsa-attaque-de-bleichenbacher/)
+  * [Attaque de Fermat](/cryptanalyse-rsa-attaque-de-fermat/)
+  * [Attaques des Modules Communs](/cryptanalyse-rsa-attaque-des-modules-communs/)

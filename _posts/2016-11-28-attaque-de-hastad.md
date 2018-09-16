@@ -1,9 +1,9 @@
 ---
-title: Attaque de hastad
+title: RSA - Attaque de hastad
 date: 2016-11-28T07:41:38+00:00
 author: Zweisamkeit
 layout: default
-permalink: /attaque-de-hastad/
+permalink: /cryptanalyse-rsa-attaque-de-hastad/
 categories:
   - Cryptanalyse
 ---

@@ -1,5 +1,4 @@
 ---
-id: 399
 title: Shellcode Polymorphique x86_64
 date: 2017-02-04T01:13:18+00:00
 author: Zweisamkeit

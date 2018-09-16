@@ -1,10 +1,9 @@
 ---
-id: 558
-title: 'Outil de Cryptanalyse : Attaque des Modules Communs'
+title: RSA - Attaque des Modules Communs
 date: 2017-05-04T23:43:42+00:00
 author: Zweisamkeit
 layout: default
-permalink: /outil-de-cryptanalyse-attaque-des-modules-communs/
+permalink: /cryptanalyse-rsa-attaque-des-modules-communs/
 categories:
   - Cryptanalyse
   - RSA

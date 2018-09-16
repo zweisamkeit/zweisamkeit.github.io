@@ -1,10 +1,9 @@
 ---
-id: 198
-title: 'Outil de Cryptanalyse : Attaque de Bleichenbacher'
+title: RSA - Attaque de Bleichenbacher
 date: 2016-12-16T12:25:53+00:00
 author: Zweisamkeit
 layout: default
-permalink: /outil-de-cryptanalyse-attaque-de-bleichenbacher/
+permalink: /cryptanalyse-rsa-attaque-de-bleichenbacher/
 categories:
   - Cryptanalyse
   - RSA

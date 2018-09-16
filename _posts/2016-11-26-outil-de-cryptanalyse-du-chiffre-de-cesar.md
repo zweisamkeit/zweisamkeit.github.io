@@ -1,9 +1,9 @@
 ---
-title: Outil de Cryptanalyse du Chiffre de César
+title: Cryptanalyse du Chiffre de César
 date: 2016-11-26T19:18:42+00:00
 author: Zweisamkeit
 layout: default
-permalink: /outil-de-cryptanalyse-du-chiffre-de-cesar/
+permalink: /cryptanalyse-du-chiffre-de-cesar/
 categories:
   - Cryptanalyse
   - Substitutions

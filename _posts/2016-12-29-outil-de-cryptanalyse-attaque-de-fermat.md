@@ -1,7 +1,6 @@
 ---
-id: 343
-title: 'Outil de Cryptanalyse : Attaque de Fermat'
-permalink: /outil-de-cryptanalyse-attaque-de-fermat/
+title: RSA - Attaque de Fermat
+permalink: /cryptanalyse-rsa-attaque-de-fermat/
 date: 2016-12-29T17:24:01+00:00
 author: Zweisamkeit
 layout: default

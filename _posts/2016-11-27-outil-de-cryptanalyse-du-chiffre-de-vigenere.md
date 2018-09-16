@@ -1,9 +1,9 @@
 ---
-title: Outil de Cryptanalyse du Chiffre de Vigenère
+title: Cryptanalyse du Chiffre de Vigenère
 date: 2016-11-27T09:02:32+00:00
 author: Zweisamkeit
 layout: default
-permalink: /outil-de-cryptanalyse-du-chiffre-de-vigenere/
+permalink: /cryptanalyse-du-chiffre-de-vigenere/
 categories:
   - Cryptanalyse
   - Substitutions
