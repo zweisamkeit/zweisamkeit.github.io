@@ -1,15 +1,12 @@
 ---
-id: 744
 title: Définition des probabilités conditionnelles
 date: 2018-09-01T18:13:10+00:00
 author: Zweisamkeit
-layout: default
+layout: post
 permalink: /definition-des-probabilites-conditionnelles/
 categories:
   - Mathématiques
 ---
-# Définition fondamentale des probabilités conditionnelles
-
 Pourquoi multiplie-t-on en probabilités lorsqu'il s'agit de calculer la probabilité de l'intersection de deux événements ?
 
 Cette pratique découle de la définition des probabilités conditionnelles.

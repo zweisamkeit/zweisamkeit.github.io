@@ -2,16 +2,14 @@
 title: RSA - Attaque des Modules Communs
 date: 2017-05-04T23:43:42+00:00
 author: Zweisamkeit
-layout: default
+layout: post
 permalink: /cryptanalyse-rsa-attaque-des-modules-communs/
 categories:
   - Cryptanalyse
   - RSA
 ---
-# RSA - Attaque des Modules Communs
-
 Parmi les nombreuses attaques side-channel  applicables à certaines utilisations maladroites du cryptosystème RSA, l'attaque des modules communs, dont l'existence est rendue possible pas une mauvaise génération de clés, se place parmi les plus simples à mettre en place, mais n'en est pas moins redoutable. Nous allons ici en développer l'idée, et en proposer une implémentation.
-1. Attaque des modules communs
+## Attaque des modules communs
 
 
 Soient ![](/img/e0ceae3ab9934ee34fb4bb54f20b656d.png)<!-- (n_A,e_A), (n_B,e_B) --> deux clés publiques RSA appartenant respectivement à A et B, deux récepteurs, et ![](/img/7564892b7fbee05d327210a3988a7a9c.png)<!-- p --> un message à transmettre, chiffré par un émetteur avec chacune de ces deux clés. Notons ![](/img/a22e8f58dccbee94b057aa1099641ec6.png)<!-- c_A --> et ![](/img/075dfb3ae460f2e10e49d6a43a191f63.png)<!-- c_B --> les deux cryptogrammes ainsi obtenus.
@@ -34,7 +32,7 @@ Par conséquent, nous avons :
 ![](/img/723cf16d0bc6cc4633fa489153d923b1.png)<!-- \left\{\begin{array}{rcl}c_A^u [n] \times c_B^v [n]&\equiv &((p^{e_A})^u [n] \times (p^{e_B})^v [n]) [n]\\ & \equiv & p^{e_Au+e_Bv} [n]\\ &\equiv &p [n]\\ &= &p\text{ car, par construction, }p \leq n\end{array}\right. -->
 
 Nous avons donc montré que l'attaquant n'a qu'à calculer le produit ![](/img/a51c8817aaed19e065cc9d8de0875cf1.png)<!-- c_A^u [n] \times c_B^v [n] --> pour obtenir le message en clair, sans disposer des clés privées de A et B.
-2. Implémentation
+## Implémentation
 
 
 Dans l'implémentation que nous proposons, nous avons pris une précaution qu'il convient de préciser : dans le calcul du produit sur lequel repose l'attaque des modules communs, il est important de noter que les calculs ont lieu dans l'anneau ![](/img/3bda007ec49ccdb382f4377f176979e5.png)<!-- \mathbb{Z}/n\mathbb{Z} -->, si bien qu'une optimisation conséquente peut être mise en place afin de réduire de manière considérable le temps d'exécution : l'exponentiation modulaire, gérée nativement par le langage python.

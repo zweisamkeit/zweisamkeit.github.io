@@ -2,13 +2,11 @@
 title: Shellcode Polymorphique x86_64
 date: 2017-02-04T01:13:18+00:00
 author: Zweisamkeit
-layout: default
+layout: post
 permalink: /shellcode-polymorphique/
 categories:
   - Sécurité Systèmes
 ---
-# Shellcode polymorphique x86_64
-
 Les attaques par buffer overflow pouvant s'avérer très dangereuses, de nombreux mécanismes de défense ont été mis en place : randomisation des adresses (ASLR), pile non-exécutable (NX), canary (SSP), ou encore analyses statiques (filtrage, hash), dynamiques (exécution isolée de l'input).
 
 Nous allons nous intéresser au contournement des mécanismes d'analyse statique, et dans une moindre mesure de certaines formes d'analyse dynamique, à l'aide d'un paradigme de shellcoding bien connu, mais très peu documenté sur l'architecture x86_64 : le polymorphisme.

@@ -2,15 +2,13 @@
 title: RSA - Attaque de hastad
 date: 2016-11-28T07:41:38+00:00
 author: Zweisamkeit
-layout: default
+layout: post
 permalink: /cryptanalyse-rsa-attaque-de-hastad/
 categories:
   - Cryptanalyse
 ---
-# RSA - Attaque de Hastad
-
 La plupart de failles de sécurité relatives aux algorithmes de cryptographie modernes sont dites « side-channel attack », c'est-à-dire dues à des facteurs externes, tels que les implémentations et utilisations qui en sont faites. Nous allons étudier l'Attaque de Hastad, aussi connue sous le nom de « Broadcast Attack », qui profite d'une faille d'utilisation du cryptosystème RSA.
-1. Attaque de Hastad
+## Attaque de Hastad
 
 
 Soit ![](/img/8a94f8e86e1c77a7c8afafcfd67e2b2d.png)<!--  P  --> un message envoyé en broadcast à ![](/img/2b2914ef52f602fdb062320ed578d1be.png)<!-- k --> personnes, ![](/img/b11cbe19e80c2017adac993ff1df550b.png)<!-- k\in\mathbb{N}^* -->.
@@ -76,7 +74,7 @@ Autrement dit, on a ![](/img/47b69a649d18e310c16779c88f9213e2.png)<!-- X=P^e -->
 Il nous suffit donc de déterminer la racine ![](/img/fc86f08db1e2e747a5f0d87d62e27731.png)<!-- e -->-ième de ![](/img/ae841fad7141f34ef547ac09e79fd21e.png)<!-- X --> pour obtenir le message déchiffré ![](/img/3a58cab8a867cf4dd00a1495b4281a40.png)<!-- P -->.
 
 Pour résumer, l'Attaque de Hastad permet de casser un chiffrement RSA quelle que soit la taille des clés, sous réserve que l'on ait intercepté le même message chiffré avec différentes clés publiques utilisant toutes le même exposant publique, et que le nombre de messages interceptés soit au moins égal à cet exposant.
-2. Implémentation
+## Implémentation
 
 
 Nous avons réalisé deux implémentations de l'attaque de Hastad. La première en Bash, dans le cas particulier où ![](/img/ec81776d083158ebd0b6d3f192cc4633.png)<!-- e=3 --> (3 étant le seul exposant usuel à être relativement petit, il semble déraisonnable, avec la puissance de calcul d'un ordinateur personnel, de tenter une attaque sur des exposants plus élevés, tels que 65537), et la seconde en python, dont nous recommandons l'utilisation, qui, elle, n'impose aucune contrainte sur l'exposant.

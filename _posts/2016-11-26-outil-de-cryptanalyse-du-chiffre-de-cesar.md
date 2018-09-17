@@ -2,14 +2,12 @@
 title: Cryptanalyse du Chiffre de César
 date: 2016-11-26T19:18:42+00:00
 author: Zweisamkeit
-layout: default
+layout: post
 permalink: /cryptanalyse-du-chiffre-de-cesar/
 categories:
   - Cryptanalyse
   - Substitutions
 ---
-# Cryptanalyse du chiffre de César
-
 Le Chiffre de César est un algorithme de cryptographie dit de substitution mono-alphabétique qui prend en entrée un message et une clé de chiffrement sous la forme d'une lettre de l'alphabet. Un décalage circulaire de chaque caractère alphabétique est opéré selon un offset égal à la position de la clé dans l'alphabet.
 
 Soient l'alphabet latin ![](/img/dd223e2a4864e4d16d07e7d5ce8b847a.png)<!---  A = \{A,B,C,..,X,Y,Z\}  --->, un plaintext ![](/img/59844d1e66b4b4f7b185b5b937f27147.png)<!--- P \in A^n --->, avec ![](/img/2248b88d5dbc03c00fd16b6b03e93afe.png)<!--- n \in \mathbb{N}^* --->, et la clé ![](/img/bc8d48482408f30bc6f81c8ca520595c.png)<!--- K \in A --->.
