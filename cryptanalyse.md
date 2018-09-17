@@ -1,5 +1,4 @@
 ---
-id: 310
 title: Cryptanalyse
 date: 2016-12-21T21:50:46+00:00
 layout: default
@@ -12,7 +11,7 @@ author: Zweisamkeit
 
 #### RSA :
 
-  * [RSHack](/rshack/) (outil principal)
+  * [RSHack](/rshack) (outil principal)
 
   * [Attaque de Hastad](/cryptanalyse-rsa-attaque-de-hastad/)
   * [Attaque de Bleichenbacher](/cryptanalyse-rsa-attaque-de-bleichenbacher/)
