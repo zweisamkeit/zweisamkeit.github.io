@@ -33,7 +33,7 @@ En effet, on a, ![](/img/b28858e575cb5e618bedb92a5bc266b2.png)<!-- \forall M_1,M
 L'algorithme sur lequel repose cette attaque se décompose en quatre parties :
 
  
-1. Blinding
+#### 1. Blinding
 
 
 Il s'agit, dans un premier temps, de faire en sorte que l'oracle ne puisse pas prendre connaissance du cryptogramme que l'on essaye de déchiffrer. Pour ce faire, nous allons générer aléatoirement des entiers positifs ![](/img/0d0052b3255cd87396e61b459dc90d39.png)<!-- s_0 --> jusqu'à ce que ![](/img/a9da00e6d63c3f77ce25bbe7574b5266.png)<!-- Oracle(C\times E(s_0)\text{ mod }n) --> nous retourne vrai, c'est-à-dire jusqu'à ce que ![](/img/e7b6cba8c39344b399b0c59863e5e1ff.png)<!-- E(M\times s_0) --> soit conforme. Nous appellerons ![](/img/c39e6fcd5997697e7a1cfabdf258ed6a.png)<!-- C_0 --> le cryptogramme obtenu à l'issue de cette première étape.
@@ -41,7 +41,7 @@ Il s'agit, dans un premier temps, de faire en sorte que l'oracle ne puisse pas p
 Notons ![](/img/d195b265bf319771f1f665318df44dad.png)<!-- k --> la longueur en bytes de n, et ![](/img/2c59cf97b850d2d204f5b6f714eb1ad7.png)<!-- B=2^{8(k-2)} -->
 
  
-2. Searching for PKCS conforming messages
+#### 2. Searching for PKCS conforming messages
 
 
 Bleichenbacher distingue alors trois cas :
@@ -52,7 +52,7 @@ Bleichenbacher distingue alors trois cas :
 
 
 
-3. Narrowing the set of solutions
+#### 3. Narrowing the set of solutions
 
 
 Une fois que nous avons trouvé ![](/img/7f67e27be79d8fe1c48df4aa711d7f00.png)<!-- s --> et que nous avons une liste d'intervalles ![](/img/f64b86dbfb445e9db0e9693497758491.png)<!-- L -->, nous allons créer une nouvelle liste ![](/img/f64b86dbfb445e9db0e9693497758491.png)<!-- L --> contenant des intervalles plus précis, et moins nombreux dans le cas où l'on a plusieurs intervalles.
@@ -66,7 +66,7 @@ Pour ce faire, il nous faut considérer chaque intervalle ![](/img/85d7744aa4a18
 Ainsi, au fur et à mesure des itérations, nous nous débarrasserons des intervalles superflues, afin d'obtenir, à terme, un unique intervalle qui pourra être affiné très rapidement grâce à la recherche binaire, jusqu'à ce que les deux bornes de celui-ci soient égales.
 
  
-4. Computing the solution
+#### 4. Computing the solution
 
 
 Une fois la nouvelle liste obtenue, on distingue deux cas :
@@ -82,7 +82,7 @@ Pour plus de précisions, nous vous invitons à lire l'article original de Bleic
 
 L'implémentation de cet algorithme repose sur une optimisation bien connue : l'exponentiation modulaire. En effet, dans la pratique, l'exposant ![](/img/08fbbff44d3f28d597d403f387e3868b.png)<!-- e --> peut valoir 65537, et les ![](/img/7f67e27be79d8fe1c48df4aa711d7f00.png)<!-- s --> sont souvent composés de plus d'une quinzaine de chiffres, ce qui peut rentre le calcul de ![](/img/4f2c52782a019d1c060f2a51b4c05f07.png)<!-- s^e \text{ mod }n --> particulièrement long si l'on n'applique le modulo qu'à la fin de calcul, comme nous avons pu le voir dans certaines implémentations en Python (e ** s % n). Nous avons choisi d'utiliser la fonction built-in pow, qui permet d'effectuer les calculs modulo ![](/img/b1923295e9f3947504e873049f97b025.png)<!-- n -->, ce qui évitera de manipuler des nombres supérieurs à ![](/img/b1923295e9f3947504e873049f97b025.png)<!-- n --> lors de l'exponentiation.
 
-Voici une démonstration de notre implémentation en Python : [Attaque de Bleichenbacher (désormais intégré à RSHack)](/rshack.html), dans le cas particulier d'un module de 2048 bits, avec un exposant publique égal à 65537, sur un unique bloc de 256 bytes. Les caractères non-imprimables affichés avant le message en clair correspondent au padding mis en place par openssl selon la norme PCKS#1 v1.5.
+Voici une démonstration de notre implémentation en Python : [Attaque de Bleichenbacher (désormais intégrée à RSHack)](/rshack.html), dans le cas particulier d'un module de 2048 bits, avec un exposant publique égal à 65537, sur un unique bloc de 256 bytes. Les caractères non-imprimables affichés avant le message en clair correspondent au padding mis en place par openssl selon la norme PCKS#1 v1.5.
 ```
 zweisamkeit@linux [ Bleichenbacher ] --> ncat -lvp 4444 -e ./oracle.py --keep-open 1>/dev/null 2>&1 &
 zweisamkeit@linux [ Bleichenbacher ] --> openssl genrsa 2048 > private.key 2>/dev/null
