@@ -54,7 +54,7 @@ Pour chaque liste, on calcule l'indice de coïncidence des différents sous-cryp
 
 L'indice le plus proche de l'indice de référence indiquera la longueur de clé la plus probable :
 
-![](/img/711295daf81b6f1a749c27e4563fea48.png)<!-- \min\limits_{i\in[\![0,n-1]\!]} |\ I_{c,i}-I_l\ | -->
+![](/img/711295daf81b6f1a749c27e4563fea48.png)<!-- \min\limits_{i\in[\![0,n-1]\!]} %VERT%\ I_{c,i}-I_l\ %VERT% Légende : %VERT = barre verticale (casse les commentaires HTML) -->
 
 Une fois la taille ![](/img/ef02f95c5b0d751c08cb0934707a17a2.png)<!--  m  --> de la clé connue, il suffit de décomposer le cryptogramme en ![](/img/6b20269491aea4ca25e98420c56c7828.png)<!-- m --> sous-cryptogrammes de la manière suivante :
 
