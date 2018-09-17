@@ -1,7 +1,7 @@
 ---
 title: Cryptanalyse
 date: 2016-12-21T21:50:46+00:00
-layout: default
+layout: page
 author: Zweisamkeit
 ---
 #### Substitutions :

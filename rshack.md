@@ -1,7 +1,7 @@
 ---
 title: RSHack
 date: 2017-05-06T18:03:41+00:00
-layout: default
+layout: page
 author: Zweisamkeit
 ---
 RSHack est un outil développé en python et en bash permettant d'effectuer des attaques sur le cryptosystème RSA, distribué sous licence GNU GPL v3, et disponible sur mon [GitHub](https://github.com/zweisamkeit/RSHack/).
