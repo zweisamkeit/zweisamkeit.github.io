@@ -7,6 +7,8 @@ permalink: /cryptanalyse-rsa-attaque-de-hastad/
 categories:
   - Cryptanalyse
 ---
+# RSA - Attaque de Hastad
+
 La plupart de failles de sécurité relatives aux algorithmes de cryptographie modernes sont dites « side-channel attack », c'est-à-dire dues à des facteurs externes, tels que les implémentations et utilisations qui en sont faites. Nous allons étudier l'Attaque de Hastad, aussi connue sous le nom de « Broadcast Attack », qui profite d'une faille d'utilisation du cryptosystème RSA.
 1. Attaque de Hastad
 

@@ -8,6 +8,8 @@ categories:
   - Cryptanalyse
   - RSA
 ---
+# RSA - Attaque de Bleichenbacher
+
 L'attaque de Bleichenbacher, applicable sur de nombreux protocoles reposant sur l'algorithme de cryptographie asymétrique RSA, permet de décrypter un message chiffré par RSA, sous réserve qu'un oracle nous indique si le padding d'un cryptogramme donné est correct ou non.
 
 Soit une paire de clés RSA ![](/img/78517ef389c102edcfc497fea171e963.png)<!-- ((n,e), (n,d)) -->, ![](/img/42087100699a995b624941d0032560e7.png)<!-- n, e\text{ et }d --> représentant respectivement le module de la clé, l'exposant publique, et l'exposant privé.

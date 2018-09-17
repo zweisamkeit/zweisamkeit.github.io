@@ -8,6 +8,8 @@ categories:
   - Cryptanalyse
   - RSA
 ---
+# RSA - Attaque de Fermat
+
 La solidité du chiffrement RSA repose sur la difficulté de factoriser le module d'une paire de clés donnée. En effet, il s'agit de retrouver, à partir du module obtenu lors de la création des clés en calculant le produit de deux nombres premiers, dans les faits très grands.
 
 Une méthode naïve pourrait être de chercher l'ensemble des nombres premiers inférieurs à la racine carrée de n, et de tenter de diviser n par chacun de ces nombres de manière dynamique.

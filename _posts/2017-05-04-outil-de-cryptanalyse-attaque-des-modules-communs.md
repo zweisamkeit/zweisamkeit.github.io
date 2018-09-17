@@ -8,6 +8,8 @@ categories:
   - Cryptanalyse
   - RSA
 ---
+# RSA - Attaque des Modules Communs
+
 Parmi les nombreuses attaques side-channel  applicables à certaines utilisations maladroites du cryptosystème RSA, l'attaque des modules communs, dont l'existence est rendue possible pas une mauvaise génération de clés, se place parmi les plus simples à mettre en place, mais n'en est pas moins redoutable. Nous allons ici en développer l'idée, et en proposer une implémentation.
 1. Attaque des modules communs
 

@@ -8,6 +8,8 @@ categories:
   - Cryptanalyse
   - Substitutions
 ---
+# Cryptanalyse du chiffre de Vigenère
+
 Le Chiffre de Vigenère est un algorithme de substitution poly-alphabétique dont le fonctionnement est assez proche de celui du Chiffre de César. La différence se situe dans la taille de la clé : le Chiffre de Vigenère prend également un message clair en entrée, mais, contrairement à César, la clé n'est pas nécessairement constituée d'un unique caractère, mais peut en contenir plusieurs. Le message chiffré est obtenu en appliquant un décalage circulaire sur chaque élément du plaintext, en prenant pour offset la position dans l'alphabet considéré des éléments de la clé répétée autant de fois que nécessaire.
 
 Pour être plus clair, considérons l'alphabet latin ![](/img/dd223e2a4864e4d16d07e7d5ce8b847a.png)<!--  A = \{A,B,C,..,X,Y,Z\}  -->, un plaintext ![](/img/59844d1e66b4b4f7b185b5b937f27147.png)<!-- P \in A^n -->, avec ![](/img/2248b88d5dbc03c00fd16b6b03e93afe.png)<!-- n \in \mathbb{N}^* -->, et la clé ![](/img/c8008694fe9d76b5d6ffe0424fcdfd6e.png)<!-- K \in A^m -->, avec ![](/img/6c22b5a2a4c40cc855076cbc0231628c.png)<!-- m \in \mathbb{N}^* -->.
