@@ -73,9 +73,9 @@ Nous avons donc remplacé le calcul du carré par de simples sommes.
 
 Dans notre implémentation, nous avons ajouté une fonctionnalité permettant de retrouver l'exposant privé de la paire de clés, ainsi que la reconstruction de la clé privée.
 
-Dans l'exemple suivant, nous avons généré un module ![](/img/85ed301d2dec3500a4a7a6b9599251f6.png)<!-- n --> obtenu à partir de nombres premiers ![](/img/85fd369a34bcb690cd5cc13153ab2c51.png)<!-- p --> et ![](/img/c69e06211d8d74949a67e9b16517a22a.png)<!-- q --> vérifiant la condition ![](/img/4eda1ededf6dd9e47ea13184ccefc251.png)<!-- |p-q| \leq c\lfloor\sqrt[4]{n}\rfloor -->, avec ![](/img/3acbdbcdf3eea57742e7dffe99416a74.png)<!-- c\in\mathbb{R}^+ --> une constante suffisamment petite.
+Dans l'exemple suivant, nous avons généré un module ![](/img/85ed301d2dec3500a4a7a6b9599251f6.png)<!-- n --> obtenu à partir de nombres premiers ![](/img/85fd369a34bcb690cd5cc13153ab2c51.png)<!-- p --> et ![](/img/c69e06211d8d74949a67e9b16517a22a.png)<!-- q --> vérifiant la condition ![](/img/4eda1ededf6dd9e47ea13184ccefc251.png)<!-- %VERT%p-q%VERT% \leq c\lfloor\sqrt[4]{n}\rfloor -->, avec ![](/img/3acbdbcdf3eea57742e7dffe99416a74.png)<!-- c\in\mathbb{R}^+ --> une constante suffisamment petite.
 
-En effet, nous avons ![](/img/e6d90fce9e63c4ef27091ab4d8a24f78.png)<!-- |p-q| =|1586161373-1586935751|=774378 -->, d'une part, et ![](/img/73da89a9417a4ca152d5476e348d078b.png)<!-- \lfloor\sqrt[4]{n}\rfloor=\lfloor\sqrt[4]{2517136189668946123}\rfloor=39831 -->, d'autre part, si bien que ![](/img/9237740405559d98d04e8bc9ec820fbb.png)<!-- c = \lceil\frac{|p-q|}{\lfloor\sqrt[4]{n}\rfloor}\rceil\approx 19,44 -->.
+En effet, nous avons ![](/img/e6d90fce9e63c4ef27091ab4d8a24f78.png)<!-- %VERT%p-q%VERT% =%VERT%1586161373-1586935751%VERT%=774378 -->, d'une part, et ![](/img/73da89a9417a4ca152d5476e348d078b.png)<!-- \lfloor\sqrt[4]{n}\rfloor=\lfloor\sqrt[4]{2517136189668946123}\rfloor=39831 -->, d'autre part, si bien que ![](/img/9237740405559d98d04e8bc9ec820fbb.png)<!-- c = \lceil\frac{%VERT%p-q%VERT%}{\lfloor\sqrt[4]{n}\rfloor}\rceil\approx 19,44 -->.
 
 ```
 zweisamkeit@linux [ RSHack ] --> ./rshack.py 
