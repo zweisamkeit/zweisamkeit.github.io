@@ -9,7 +9,7 @@ Enseignant en philosophie (au lycée puis à l'université en tant que chargé d
 
 Membre de l'équipe de CTF [Tipi'Hack](https://tipi-hack.github.io/)
 
-Ce site n’est pas un blog, en ce sens qu’il n’a pas vocation à faire l’objet de publications régulières, ni à héberger des commentaires sur l’actualité. Il s’agit simplement d’un support me permettant d’expliquer d'exposer mes travaux – et dans une moindre mesure quelques résolutions de challenges de sécurité – dans l’idée qu’ils puissent servir à d’autres, et qu’ils suscitent des propositions d’améliorations de la part d’esprits plus érudits que le mien.
+Ce site n’est pas un blog, en ce sens qu’il n’a pas vocation à faire l’objet de publications régulières, ni à héberger des commentaires sur l’actualité. Il s’agit simplement d’un support me permettant d'exposer mes travaux – et dans une moindre mesure quelques résolutions de challenges de sécurité – dans l’idée qu’ils puissent servir à d’autres, et qu’ils suscitent des propositions d’améliorations de la part d’esprits plus érudits que le mien.
 
 #### Genèse
 

@@ -23,14 +23,14 @@ Tout d'abord, considérons le code C suivant, comportant une vulnérabilité de 
  
 int main(int argc, char **argv){
  
-* char buffer[256];
-* int i=0;
+ char buffer[256];
+ int i=0;
  
-* printf("Adresse buffer : %p\n", buffer);
-* 
-* strcpy(buffer, argv[1]);
+ printf("Adresse buffer : %p\n", buffer);
  
-* return 0;
+ strcpy(buffer, argv[1]);
+ 
+ return 0;
 }
 ```
 
@@ -118,21 +118,21 @@ Reconsidérons le code utilisé dans la première partie, agrémenté d'un filtr
 
 int main(int argc, char **argv){
 
-* char buffer[256];
-* int i=0;
+ char buffer[256];
+ int i=0;
 
-* printf("Adresse buffer : %p\n", buffer);
+ printf("Adresse buffer : %p\n", buffer);
 
-* char *ret = strstr(argv[1],"\x62\x69\x6e"); // filter
+ char *ret = strstr(argv[1],"\x62\x69\x6e"); // filter
 
-* if (ret!=NULL){
-* * printf("%s\n","Hack attempt!");
-* * return 1;
-* }
+ if (ret!=NULL){
+   printf("%s\n","Hack attempt!");
+   return 1;
+ }
 
-* strcpy(buffer, argv[1]);
+ strcpy(buffer, argv[1]);
 
-* return 0;
+ return 0;
 }
 ```
 
